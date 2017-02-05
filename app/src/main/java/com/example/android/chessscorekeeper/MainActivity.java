@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void resetScore(View v) {
         scorePlayerA = 0;
-        scorePlayerA = 0;
+        scorePlayerB = 0;
         displayForPlayerA(scorePlayerA);
-        displayForPlayerB(scorePlayerA);
+        displayForPlayerB(scorePlayerB);
 
     }
     /**
