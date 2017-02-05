@@ -16,20 +16,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-     public void winPlayerA(View v) {
-         scorePlayerA +=1;
-         displayForPlayerA(scorePlayerA);
-     }
+    public void winPlayerA(View v) {
+        scorePlayerA += 1;
+        displayForPlayerA(scorePlayerA);
+    }
 
     public void winPlayerB(View v) {
-        scorePlayerB +=1;
+        scorePlayerB += 1;
         displayForPlayerB(scorePlayerB);
 
     }
 
     public void remis(View v) {
-        scorePlayerA +=.5;
-        scorePlayerB +=.5;
+        scorePlayerA += .5;
+        scorePlayerB += .5;
         displayForPlayerA(scorePlayerA);
         displayForPlayerB(scorePlayerB);
     }
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         displayForPlayerB(scorePlayerB);
 
     }
+
     /**
      * Displays the given score for Team A.
      */
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.scorePlayerA);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given score for Team B.
      */

@@ -4,6 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/board"
+        android:scaleType="centerCrop"
+        />
     <LinearLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
@@ -21,18 +27,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:paddingTop="16dp"
-                android:textColor="#616161"
+                android:textColor="#333333"
                 android:text="Player A" />
 
             <TextView
                 android:id="@+id/scorePlayerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:textSize="36sp"
                 android:textAlignment="center"
                 android:paddingTop="16dp"
+                android:textStyle="bold"
                 android:textColor="#111111"
                 android:text="0" />
 
@@ -42,8 +49,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:text="Win"
-                android:onClick="winPlayerA"/>
+                android:text="Checkmate"
+                android:textColor="@color/colorButtonText"
+                android:onClick="winPlayerB"/>
 
         </LinearLayout>
 
@@ -61,17 +69,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:paddingTop="16dp"
                 android:textAlignment="center"
-                android:textColor="#616161"
+                android:textColor="#333333"
                 android:text="Player B" />
 
             <TextView
                 android:id="@+id/scorePlayerB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:textSize="36sp"
+                android:textStyle="bold"
                 android:paddingTop="16dp"
                 android:textColor="#111111"
                 android:textAlignment="center"
@@ -83,8 +92,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:text="Win"
-                android:onClick="winPlayerB"/>
+                android:textColor="@color/colorButtonText"
+                android:text="Checkmate"
+                android:onClick="winPlayerA"/>
 
         </LinearLayout>
 
@@ -104,12 +114,14 @@
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:text="Remis"
+            android:textColor="@color/colorButtonText"
             android:onClick="remis"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorButtonText"
             android:text="Reset"
             android:onClick="resetScore"/>
     </LinearLayout>
