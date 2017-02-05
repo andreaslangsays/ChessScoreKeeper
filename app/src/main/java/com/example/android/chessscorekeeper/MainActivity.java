@@ -16,17 +16,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * checkmate for Player B
+     * Player A gets one Point
+     */
     public void winPlayerA(View v) {
         scorePlayerA += 1;
         displayForPlayerA(scorePlayerA);
     }
 
+    /**
+     * checkmate for Player A
+     * Player B gets one point
+     */
     public void winPlayerB(View v) {
         scorePlayerB += 1;
         displayForPlayerB(scorePlayerB);
 
     }
 
+    /**
+     * remis: both players get half a point
+     */
     public void remis(View v) {
         scorePlayerA += .5;
         scorePlayerB += .5;
@@ -34,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         displayForPlayerB(scorePlayerB);
     }
 
+    /**
+     * resets both scores to zero
+     */
     public void resetScore(View v) {
         scorePlayerA = 0;
         scorePlayerB = 0;
@@ -43,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Player A.
      */
     public void displayForPlayerA(float score) {
         TextView scoreView = (TextView) findViewById(R.id.scorePlayerA);
@@ -51,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team B.
+     * Displays the given score for Player B.
      */
     public void displayForPlayerB(float score) {
         TextView scoreView = (TextView) findViewById(R.id.scorePlayerB);
